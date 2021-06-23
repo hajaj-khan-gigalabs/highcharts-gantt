@@ -1,0 +1,271 @@
+[
+  {
+    "name": "New offices",
+    "id": "new_offices",
+    "owner": "Peter"
+  },
+  {
+    "name": "Prepare office building",
+    "id": "prepare_building",
+    "parent": "new_offices",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 1
+    },
+    "owner": "Linda"
+  },
+  {
+    "name": "Inspect building",
+    "id": "inspect_building",
+    "dependency": "prepare_building",
+    "parent": "new_offices",
+    "start": "",
+    "end": "",
+    "owner": "Ivy"
+  },
+  {
+    "name": "Passed inspection",
+    "id": "passed_inspection",
+    "dependency": "inspect_building",
+    "parent": "new_offices",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter"
+  },
+  {
+    "name": "Relocate",
+    "id": "relocate",
+    "dependency": "passed_inspection",
+    "parent": "new_offices",
+    "start": "",
+    "end": "",
+    "owner": "Josh"
+  },
+  {
+    "name": "Relocate staff",
+    "id": "relocate_staff",
+    "parent": "relocate",
+    "start": "",
+    "end": "",
+    "owner": "Mark"
+  },
+  {
+    "name": "Relocate test facility",
+    "dependency": "relocate_staff",
+    "parent": "relocate",
+    "start": "",
+    "end": "",
+    "owner": "Anne"
+  },
+  {
+    "name": "Relocate cantina",
+    "dependency": "relocate_staff",
+    "start": "",
+    "end": "",
+    "parent": "relocate"
+  },
+  {
+    "name": "New offices",
+    "id": "new_offices1",
+    "owner": "Peter"
+  },
+  {
+    "name": "Prepare office building",
+    "id": "prepare_building1",
+    "parent": "new_offices1",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 1
+    },
+    "owner": "Linda"
+  },
+  {
+    "name": "Inspect building",
+    "id": "inspect_building1",
+    "dependency": "prepare_building1",
+    "parent": "new_offices1",
+    "start": "",
+    "end": "",
+    "owner": "Ivy"
+  },
+  {
+    "name": "Passed inspection",
+    "id": "passed_inspection1",
+    "dependency": "inspect_building1",
+    "parent": "new_offices1",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter"
+  },
+  {
+    "name": "Relocate",
+    "id": "relocate1",
+    "dependency": "passed_inspection1",
+    "parent": "new_offices1",
+    "start": "",
+    "end": "",
+    "owner": "Josh"
+  },
+  {
+    "name": "Relocate staff",
+    "id": "relocate_staff1",
+    "parent": "relocate1",
+    "start": "",
+    "end": "",
+    "owner": "Mark"
+  },
+  {
+    "name": "Relocate test facility",
+    "dependency": "relocate_staff1",
+    "parent": "relocate1",
+    "start": "",
+    "end": "",
+    "owner": "Anne"
+  },
+  {
+    "name": "Relocate cantina1",
+    "dependency": "relocate_staff1",
+    "start": "",
+    "end": "",
+    "parent": "relocate1"
+  },
+  {
+    "name": "New offices",
+    "id": "new_offices2",
+    "owner": "Peter"
+  },
+  {
+    "name": "Prepare office building",
+    "id": "prepare_building2",
+    "parent": "new_offices2",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 1
+    },
+    "owner": "Linda"
+  },
+  {
+    "name": "Inspect building",
+    "id": "inspect_building2",
+    "dependency": "prepare_building2",
+    "parent": "new_offices2",
+    "start": "",
+    "end": "",
+    "owner": "Ivy"
+  },
+  {
+    "name": "Passed inspection",
+    "id": "passed_inspection2",
+    "dependency": "inspect_building2",
+    "parent": "new_offices2",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter"
+  },
+  {
+    "name": "Relocate",
+    "id": "relocate2",
+    "dependency": "passed_inspection2",
+    "parent": "new_offices2",
+    "start": "",
+    "end": "",
+    "owner": "Josh"
+  },
+  {
+    "name": "Relocate staff",
+    "id": "relocate_staff2",
+    "parent": "relocate2",
+    "start": "",
+    "end": "",
+    "owner": "Mark"
+  },
+  {
+    "name": "Relocate test facility",
+    "dependency": "relocate_staff2",
+    "parent": "relocate2",
+    "start": "",
+    "end": "",
+    "owner": "Anne"
+  },
+  {
+    "name": "Relocate cantina",
+    "dependency": "relocate_staff2",
+    "start": "",
+    "end": "",
+    "parent": "relocate2"
+  },
+  {
+    "name": "New offices",
+    "id": "new_offices3",
+    "owner": "Peter"
+  },
+  {
+    "name": "Prepare office building",
+    "id": "prepare_building3",
+    "parent": "new_offices3",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 1
+    },
+    "owner": "Linda"
+  },
+  {
+    "name": "Inspect building",
+    "id": "inspect_building3",
+    "dependency": "prepare_building3",
+    "parent": "new_offices3",
+    "start": "",
+    "end": "",
+    "owner": "Ivy"
+  },
+  {
+    "name": "Passed inspection",
+    "id": "passed_inspection3",
+    "dependency": "inspect_building3",
+    "parent": "new_offices3",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter"
+  },
+  {
+    "name": "Relocate",
+    "id": "relocate3",
+    "dependency": "passed_inspection3",
+    "parent": "new_offices3",
+    "start": "",
+    "end": "",
+    "owner": "Josh"
+  },
+  {
+    "name": "Relocate staff",
+    "id": "relocate_staff3",
+    "parent": "relocate3",
+    "start": "",
+    "end": "",
+    "owner": "Mark"
+  },
+  {
+    "name": "Relocate test facility",
+    "dependency": "relocate_staff3",
+    "parent": "relocate3",
+    "start": "",
+    "end": "",
+    "owner": "Anne"
+  },
+  {
+    "name": "Relocate cantina",
+    "dependency": "relocate_staff3",
+    "start": "",
+    "end": "",
+    "parent": "relocate3"
+  }
+
+]
