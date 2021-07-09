@@ -2,7 +2,8 @@
   {
     "name": "New offices",
     "id": "new_offices",
-    "owner": "Peter"
+    "owner": "Peter",
+    "collapsed": false
   },
   {
     "name": "Prepare office building",
@@ -13,7 +14,8 @@
     "completed": {
       "amount": 1
     },
-    "owner": "Linda"
+    "owner": "Linda",
+    "collapsed": false
   },
   {
     "name": "Inspect building",
@@ -22,7 +24,8 @@
     "parent": "new_offices",
     "start": "",
     "end": "",
-    "owner": "Ivy"
+    "owner": "Ivy",
+    "collapsed": false
   },
   {
     "name": "Passed inspection",
@@ -32,7 +35,8 @@
     "start": "",
     "end": "",
     "milestone": true,
-    "owner": "Peter"
+    "owner": "Peter",
+    "collapsed": false
   },
   {
     "name": "Relocate",
@@ -41,7 +45,8 @@
     "parent": "new_offices",
     "start": "",
     "end": "",
-    "owner": "Josh"
+    "owner": "Josh",
+    "collapsed": false
   },
   {
     "name": "Relocate staff",
@@ -49,7 +54,17 @@
     "parent": "relocate",
     "start": "",
     "end": "",
-    "owner": "Mark"
+    "owner": "Mark",
+    "collapsed": false
+  },
+  {
+    "name": "Relocate staff child",
+    "id": "relocate_staff_child",
+    "parent": "relocate_staff",
+    "start": "",
+    "end": "",
+    "owner": "Mark",
+    "collapsed": false
   },
   {
     "name": "Relocate test facility",
@@ -57,19 +72,22 @@
     "parent": "relocate",
     "start": "",
     "end": "",
-    "owner": "Anne"
+    "owner": "Anne",
+    "collapsed": false
   },
   {
     "name": "Relocate cantina",
     "dependency": "relocate_staff",
     "start": "",
     "end": "",
-    "parent": "relocate"
+    "parent": "relocate",
+    "collapsed": false
   },
   {
     "name": "New offices",
     "id": "new_offices1",
-    "owner": "Peter"
+    "owner": "Peter",
+    "collapsed": false
   },
   {
     "name": "Prepare office building",
@@ -80,7 +98,8 @@
     "completed": {
       "amount": 1
     },
-    "owner": "Linda"
+    "owner": "Linda",
+    "collapsed": false
   },
   {
     "name": "Inspect building",
@@ -89,7 +108,8 @@
     "parent": "new_offices1",
     "start": "",
     "end": "",
-    "owner": "Ivy"
+    "owner": "Ivy",
+    "collapsed": false
   },
   {
     "name": "Passed inspection",
@@ -99,7 +119,8 @@
     "start": "",
     "end": "",
     "milestone": true,
-    "owner": "Peter"
+    "owner": "Peter",
+    "collapsed": false
   },
   {
     "name": "Relocate",
@@ -108,7 +129,8 @@
     "parent": "new_offices1",
     "start": "",
     "end": "",
-    "owner": "Josh"
+    "owner": "Josh",
+    "collapsed": false
   },
   {
     "name": "Relocate staff",
@@ -116,7 +138,8 @@
     "parent": "relocate1",
     "start": "",
     "end": "",
-    "owner": "Mark"
+    "owner": "Mark",
+    "collapsed": false
   },
   {
     "name": "Relocate test facility",
@@ -124,19 +147,22 @@
     "parent": "relocate1",
     "start": "",
     "end": "",
-    "owner": "Anne"
+    "owner": "Anne",
+    "collapsed": false
   },
   {
     "name": "Relocate cantina1",
     "dependency": "relocate_staff1",
     "start": "",
     "end": "",
-    "parent": "relocate1"
+    "parent": "relocate1",
+    "collapsed": false
   },
   {
     "name": "New offices",
     "id": "new_offices2",
-    "owner": "Peter"
+    "owner": "Peter",
+    "collapsed": false
   },
   {
     "name": "Prepare office building",
@@ -147,7 +173,8 @@
     "completed": {
       "amount": 1
     },
-    "owner": "Linda"
+    "owner": "Linda",
+    "collapsed": false
   },
   {
     "name": "Inspect building",
@@ -156,7 +183,8 @@
     "parent": "new_offices2",
     "start": "",
     "end": "",
-    "owner": "Ivy"
+    "owner": "Ivy",
+    "collapsed": false
   },
   {
     "name": "Passed inspection",
@@ -166,7 +194,8 @@
     "start": "",
     "end": "",
     "milestone": true,
-    "owner": "Peter"
+    "owner": "Peter",
+    "collapsed": false
   },
   {
     "name": "Relocate",
@@ -175,7 +204,8 @@
     "parent": "new_offices2",
     "start": "",
     "end": "",
-    "owner": "Josh"
+    "owner": "Josh",
+    "collapsed": false
   },
   {
     "name": "Relocate staff",
@@ -183,7 +213,8 @@
     "parent": "relocate2",
     "start": "",
     "end": "",
-    "owner": "Mark"
+    "owner": "Mark",
+    "collapsed": false
   },
   {
     "name": "Relocate test facility",
@@ -191,19 +222,22 @@
     "parent": "relocate2",
     "start": "",
     "end": "",
-    "owner": "Anne"
+    "owner": "Anne",
+    "collapsed": false
   },
   {
     "name": "Relocate cantina",
     "dependency": "relocate_staff2",
     "start": "",
     "end": "",
-    "parent": "relocate2"
+    "parent": "relocate2",
+    "collapsed": false
   },
   {
     "name": "New offices",
     "id": "new_offices3",
-    "owner": "Peter"
+    "owner": "Peter",
+    "collapsed": false
   },
   {
     "name": "Prepare office building",
@@ -214,7 +248,8 @@
     "completed": {
       "amount": 1
     },
-    "owner": "Linda"
+    "owner": "Linda",
+    "collapsed": false
   },
   {
     "name": "Inspect building",
@@ -223,7 +258,8 @@
     "parent": "new_offices3",
     "start": "",
     "end": "",
-    "owner": "Ivy"
+    "owner": "Ivy",
+    "collapsed": false
   },
   {
     "name": "Passed inspection",
@@ -233,7 +269,8 @@
     "start": "",
     "end": "",
     "milestone": true,
-    "owner": "Peter"
+    "owner": "Peter",
+    "collapsed": false
   },
   {
     "name": "Relocate",
@@ -242,7 +279,8 @@
     "parent": "new_offices3",
     "start": "",
     "end": "",
-    "owner": "Josh"
+    "owner": "Josh",
+    "collapsed": false
   },
   {
     "name": "Relocate staff",
@@ -250,7 +288,8 @@
     "parent": "relocate3",
     "start": "",
     "end": "",
-    "owner": "Mark"
+    "owner": "Mark",
+    "collapsed": false
   },
   {
     "name": "Relocate test facility",
@@ -258,14 +297,64 @@
     "parent": "relocate3",
     "start": "",
     "end": "",
-    "owner": "Anne"
+    "owner": "Anne",
+    "collapsed": false
   },
   {
     "name": "Relocate cantina",
     "dependency": "relocate_staff3",
     "start": "",
     "end": "",
-    "parent": "relocate3"
+    "parent": "relocate3",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch",
+    "id": "new_product",
+    "owner": "Peter",
+    "collapsed": false
+  },
+  {
+    "name": "Development",
+    "id": "development",
+    "parent": "new_product",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan",
+    "collapsed": false
+  },
+  {
+    "name": "Beta",
+    "id": "beta",
+    "dependency": "development",
+    "parent": "new_product",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter",
+    "collapsed": false
+  },
+  {
+    "name": "Final development",
+    "id": "finalize",
+    "dependency": "beta",
+    "parent": "new_product",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch",
+    "dependency": "finalize",
+    "parent": "new_product",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter",
+    "collapsed": false
   }
-
 ]
