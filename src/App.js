@@ -38,7 +38,7 @@ var state = {
           text: "1m",
           events: {
             click: function () {
-              alert("Clicked button");
+              console.log("Button Clicked");
             },
           },
         },
@@ -210,6 +210,11 @@ var state = {
       currentDateIndicator: true,
     },
     yAxis: {
+      labels: {
+        style: {
+          "z-index": 99999,
+        },
+      },
       events: {
         // expand: function (event) {
         //   console.log("expand", event);
@@ -302,56 +307,6 @@ var state = {
         data: taskData,
       },
     ],
-    // tooltip: {
-    //   pointFormatter: function () {
-    //     var point = this,
-    //       format = "%e. %b",
-    //       options = point.options,
-    //       completed = options.completed,
-    //       amount = isObject(completed) ? completed.amount : completed,
-    //       status = (amount || 0) * 100 + "%",
-    //       lines;
-
-    //     lines = [
-    //       {
-    //         value: point.name,
-    //         style: "font-weight: bold;",
-    //       },
-    //       {
-    //         title: "Start",
-    //         value: dateFormat(format, point.start),
-    //       },
-    //       {
-    //         visible: !options.milestone,
-    //         title: "End",
-    //         value: dateFormat(format, point.end),
-    //       },
-    //       {
-    //         title: "Completed",
-    //         value: status,
-    //       },
-    //       {
-    //         title: "Owner",
-    //         value: options.owner || "unassigned",
-    //       },
-    //     ];
-
-    //     return lines.reduce(function (str, line) {
-    //       var s = "",
-    //         style = defined(line.style) ? line.style : "font-size: 0.8em;";
-    //       if (line.visible !== false) {
-    //         s =
-    //           '<span style="' +
-    //           style +
-    //           '">' +
-    //           (defined(line.title) ? line.title + ": " : "") +
-    //           (defined(line.value) ? line.value : "") +
-    //           "</span><br/>";
-    //       }
-    //       return str + s;
-    //     }, "");
-    //   },
-    // },
     mapNavigation: {
       enabled: true,
       buttons: { zoomIn: { align: "right" }, zoomOut: { align: "right" } },
@@ -440,7 +395,7 @@ const addMouseWheelZoom = () => {
         event.preventDefault();
         if (event.deltaY == -100)
           chartComponent.current.chart.mapZoom(
-            0.8,
+            0.7,
             chartComponent.current.chart.xAxis[0].toValue(event.clientX),
             chartComponent.current.chart.yAxis[0].toValue(event.clientY),
             event.clientX,
@@ -448,7 +403,7 @@ const addMouseWheelZoom = () => {
           );
         else
           chartComponent.current.chart.mapZoom(
-            1.2,
+            1.3,
             chartComponent.current.chart.xAxis[0].toValue(event.clientX),
             chartComponent.current.chart.yAxis[0].toValue(event.clientY),
             event.clientX,
@@ -492,7 +447,7 @@ const zoomCallback = () => {
 function App() {
   const chartInitilization = () => {
     taskData.map((x, i) => {
-      x.start = today + (1 + i) * day;
+      x.start = today + (i - 5) * day;
       x.end = today + (25 + i) * day;
       return x;
     });
