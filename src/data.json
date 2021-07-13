@@ -356,5 +356,1475 @@
     "milestone": true,
     "owner": "Peter",
     "collapsed": false
+  },
+  {
+    "name": "New product launch1",
+    "id": "new_product1",
+    "owner": "Peter1",
+    "collapsed": false
+  },
+  {
+    "name": "Development1",
+    "id": "development1",
+    "parent": "new_product1",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan1",
+    "collapsed": false
+  },
+  {
+    "name": "Beta1",
+    "id": "beta1",
+    "dependency": "development1",
+    "parent": "new_product1",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter1",
+    "collapsed": false
+  },
+  {
+    "name": "Final development1",
+    "id": "finalize1",
+    "dependency": "beta1",
+    "parent": "new_product1",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch1",
+    "dependency": "finalize1",
+    "parent": "new_product1",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter1",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch2",
+    "id": "new_product2",
+    "owner": "Peter2",
+    "collapsed": false
+  },
+  {
+    "name": "Development2",
+    "id": "development2",
+    "parent": "new_product2",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan2",
+    "collapsed": false
+  },
+  {
+    "name": "Beta2",
+    "id": "beta2",
+    "dependency": "development2",
+    "parent": "new_product2",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter2",
+    "collapsed": false
+  },
+  {
+    "name": "Final development2",
+    "id": "finalize2",
+    "dependency": "beta2",
+    "parent": "new_product2",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch2",
+    "dependency": "finalize2",
+    "parent": "new_product2",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter2",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch3",
+    "id": "new_product3",
+    "owner": "Peter3",
+    "collapsed": false
+  },
+  {
+    "name": "Development3",
+    "id": "development3",
+    "parent": "new_product3",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan3",
+    "collapsed": false
+  },
+  {
+    "name": "Beta3",
+    "id": "beta3",
+    "dependency": "development3",
+    "parent": "new_product3",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter3",
+    "collapsed": false
+  },
+  {
+    "name": "Final development3",
+    "id": "finalize3",
+    "dependency": "beta3",
+    "parent": "new_product3",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch3",
+    "dependency": "finalize3",
+    "parent": "new_product3",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter3",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch4",
+    "id": "new_product4",
+    "owner": "Peter4",
+    "collapsed": false
+  },
+  {
+    "name": "Development4",
+    "id": "development4",
+    "parent": "new_product4",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan4",
+    "collapsed": false
+  },
+  {
+    "name": "Beta4",
+    "id": "beta4",
+    "dependency": "development4",
+    "parent": "new_product4",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter4",
+    "collapsed": false
+  },
+  {
+    "name": "Final development4",
+    "id": "finalize4",
+    "dependency": "beta4",
+    "parent": "new_product4",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch4",
+    "dependency": "finalize4",
+    "parent": "new_product4",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter4",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch5",
+    "id": "new_product5",
+    "owner": "Peter5",
+    "collapsed": false
+  },
+  {
+    "name": "Development5",
+    "id": "development5",
+    "parent": "new_product5",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan5",
+    "collapsed": false
+  },
+  {
+    "name": "Beta5",
+    "id": "beta5",
+    "dependency": "development5",
+    "parent": "new_product5",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter5",
+    "collapsed": false
+  },
+  {
+    "name": "Final development5",
+    "id": "finalize5",
+    "dependency": "beta5",
+    "parent": "new_product5",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch5",
+    "dependency": "finalize5",
+    "parent": "new_product5",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter5",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch6",
+    "id": "new_product6",
+    "owner": "Peter6",
+    "collapsed": false
+  },
+  {
+    "name": "Development6",
+    "id": "development6",
+    "parent": "new_product6",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan6",
+    "collapsed": false
+  },
+  {
+    "name": "Beta6",
+    "id": "beta6",
+    "dependency": "development6",
+    "parent": "new_product6",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter6",
+    "collapsed": false
+  },
+  {
+    "name": "Final development6",
+    "id": "finalize6",
+    "dependency": "beta6",
+    "parent": "new_product6",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch6",
+    "dependency": "finalize6",
+    "parent": "new_product6",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter6",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch7",
+    "id": "new_product7",
+    "owner": "Peter7",
+    "collapsed": false
+  },
+  {
+    "name": "Development7",
+    "id": "development7",
+    "parent": "new_product7",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan7",
+    "collapsed": false
+  },
+  {
+    "name": "Beta7",
+    "id": "beta7",
+    "dependency": "development7",
+    "parent": "new_product7",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter7",
+    "collapsed": false
+  },
+  {
+    "name": "Final development7",
+    "id": "finalize7",
+    "dependency": "beta7",
+    "parent": "new_product7",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch7",
+    "dependency": "finalize7",
+    "parent": "new_product7",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter7",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch8",
+    "id": "new_product8",
+    "owner": "Peter8",
+    "collapsed": false
+  },
+  {
+    "name": "Development8",
+    "id": "development8",
+    "parent": "new_product8",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan8",
+    "collapsed": false
+  },
+  {
+    "name": "Beta8",
+    "id": "beta8",
+    "dependency": "development8",
+    "parent": "new_product8",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter8",
+    "collapsed": false
+  },
+  {
+    "name": "Final development8",
+    "id": "finalize8",
+    "dependency": "beta8",
+    "parent": "new_product8",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch8",
+    "dependency": "finalize8",
+    "parent": "new_product8",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter8",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch9",
+    "id": "new_product9",
+    "owner": "Peter9",
+    "collapsed": false
+  },
+  {
+    "name": "Development9",
+    "id": "development9",
+    "parent": "new_product9",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan9",
+    "collapsed": false
+  },
+  {
+    "name": "Beta9",
+    "id": "beta9",
+    "dependency": "development9",
+    "parent": "new_product9",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter9",
+    "collapsed": false
+  },
+  {
+    "name": "Final development9",
+    "id": "finalize9",
+    "dependency": "beta9",
+    "parent": "new_product9",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch9",
+    "dependency": "finalize9",
+    "parent": "new_product9",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter9",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch10",
+    "id": "new_product10",
+    "owner": "Peter10",
+    "collapsed": false
+  },
+  {
+    "name": "Development10",
+    "id": "development10",
+    "parent": "new_product10",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan10",
+    "collapsed": false
+  },
+  {
+    "name": "Beta10",
+    "id": "beta10",
+    "dependency": "development10",
+    "parent": "new_product10",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter10",
+    "collapsed": false
+  },
+  {
+    "name": "Final development10",
+    "id": "finalize10",
+    "dependency": "beta10",
+    "parent": "new_product10",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch10",
+    "dependency": "finalize10",
+    "parent": "new_product10",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter10",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch11",
+    "id": "new_product11",
+    "owner": "Peter11",
+    "collapsed": false
+  },
+  {
+    "name": "Development11",
+    "id": "development11",
+    "parent": "new_product11",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan11",
+    "collapsed": false
+  },
+  {
+    "name": "Beta11",
+    "id": "beta11",
+    "dependency": "development11",
+    "parent": "new_product11",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter11",
+    "collapsed": false
+  },
+  {
+    "name": "Final development11",
+    "id": "finalize11",
+    "dependency": "beta11",
+    "parent": "new_product11",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch11",
+    "dependency": "finalize11",
+    "parent": "new_product11",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter11",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch12",
+    "id": "new_product12",
+    "owner": "Peter12",
+    "collapsed": false
+  },
+  {
+    "name": "Development12",
+    "id": "development12",
+    "parent": "new_product12",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan12",
+    "collapsed": false
+  },
+  {
+    "name": "Beta12",
+    "id": "beta12",
+    "dependency": "development12",
+    "parent": "new_product12",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter12",
+    "collapsed": false
+  },
+  {
+    "name": "Final development12",
+    "id": "finalize12",
+    "dependency": "beta12",
+    "parent": "new_product12",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch12",
+    "dependency": "finalize12",
+    "parent": "new_product12",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter12",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch13",
+    "id": "new_product13",
+    "owner": "Peter13",
+    "collapsed": false
+  },
+  {
+    "name": "Development13",
+    "id": "development13",
+    "parent": "new_product13",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan13",
+    "collapsed": false
+  },
+  {
+    "name": "Beta13",
+    "id": "beta13",
+    "dependency": "development13",
+    "parent": "new_product13",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter13",
+    "collapsed": false
+  },
+  {
+    "name": "Final development13",
+    "id": "finalize13",
+    "dependency": "beta13",
+    "parent": "new_product13",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch13",
+    "dependency": "finalize13",
+    "parent": "new_product13",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter13",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch14",
+    "id": "new_product14",
+    "owner": "Peter14",
+    "collapsed": false
+  },
+  {
+    "name": "Development14",
+    "id": "development14",
+    "parent": "new_product14",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan14",
+    "collapsed": false
+  },
+  {
+    "name": "Beta14",
+    "id": "beta14",
+    "dependency": "development14",
+    "parent": "new_product14",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter14",
+    "collapsed": false
+  },
+  {
+    "name": "Final development14",
+    "id": "finalize14",
+    "dependency": "beta14",
+    "parent": "new_product14",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch14",
+    "dependency": "finalize14",
+    "parent": "new_product14",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter14",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch15",
+    "id": "new_product15",
+    "owner": "Peter15",
+    "collapsed": false
+  },
+  {
+    "name": "Development15",
+    "id": "development15",
+    "parent": "new_product15",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan15",
+    "collapsed": false
+  },
+  {
+    "name": "Beta15",
+    "id": "beta15",
+    "dependency": "development15",
+    "parent": "new_product15",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter15",
+    "collapsed": false
+  },
+  {
+    "name": "Final development15",
+    "id": "finalize15",
+    "dependency": "beta15",
+    "parent": "new_product15",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch15",
+    "dependency": "finalize15",
+    "parent": "new_product15",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter15",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch16",
+    "id": "new_product16",
+    "owner": "Peter16",
+    "collapsed": false
+  },
+  {
+    "name": "Development16",
+    "id": "development16",
+    "parent": "new_product16",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan16",
+    "collapsed": false
+  },
+  {
+    "name": "Beta16",
+    "id": "beta16",
+    "dependency": "development16",
+    "parent": "new_product16",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter16",
+    "collapsed": false
+  },
+  {
+    "name": "Final development16",
+    "id": "finalize16",
+    "dependency": "beta16",
+    "parent": "new_product16",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch16",
+    "dependency": "finalize16",
+    "parent": "new_product16",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter16",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch17",
+    "id": "new_product17",
+    "owner": "Peter17",
+    "collapsed": false
+  },
+  {
+    "name": "Development17",
+    "id": "development17",
+    "parent": "new_product17",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan17",
+    "collapsed": false
+  },
+  {
+    "name": "Beta17",
+    "id": "beta17",
+    "dependency": "development17",
+    "parent": "new_product17",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter17",
+    "collapsed": false
+  },
+  {
+    "name": "Final development17",
+    "id": "finalize17",
+    "dependency": "beta17",
+    "parent": "new_product17",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch17",
+    "dependency": "finalize17",
+    "parent": "new_product17",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter17",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch18",
+    "id": "new_product18",
+    "owner": "Peter18",
+    "collapsed": false
+  },
+  {
+    "name": "Development18",
+    "id": "development18",
+    "parent": "new_product18",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan18",
+    "collapsed": false
+  },
+  {
+    "name": "Beta18",
+    "id": "beta18",
+    "dependency": "development18",
+    "parent": "new_product18",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter18",
+    "collapsed": false
+  },
+  {
+    "name": "Final development18",
+    "id": "finalize18",
+    "dependency": "beta18",
+    "parent": "new_product18",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch18",
+    "dependency": "finalize18",
+    "parent": "new_product18",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter18",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch19",
+    "id": "new_product19",
+    "owner": "Peter19",
+    "collapsed": false
+  },
+  {
+    "name": "Development19",
+    "id": "development19",
+    "parent": "new_product19",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan19",
+    "collapsed": false
+  },
+  {
+    "name": "Beta19",
+    "id": "beta19",
+    "dependency": "development19",
+    "parent": "new_product19",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter19",
+    "collapsed": false
+  },
+  {
+    "name": "Final development19",
+    "id": "finalize19",
+    "dependency": "beta19",
+    "parent": "new_product19",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch19",
+    "dependency": "finalize19",
+    "parent": "new_product19",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter19",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch20",
+    "id": "new_product20",
+    "owner": "Peter20",
+    "collapsed": false
+  },
+  {
+    "name": "Development20",
+    "id": "development20",
+    "parent": "new_product20",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan20",
+    "collapsed": false
+  },
+  {
+    "name": "Beta20",
+    "id": "beta20",
+    "dependency": "development20",
+    "parent": "new_product20",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter20",
+    "collapsed": false
+  },
+  {
+    "name": "Final development20",
+    "id": "finalize20",
+    "dependency": "beta20",
+    "parent": "new_product20",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch20",
+    "dependency": "finalize20",
+    "parent": "new_product20",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter20",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch21",
+    "id": "new_product21",
+    "owner": "Peter21",
+    "collapsed": false
+  },
+  {
+    "name": "Development21",
+    "id": "development21",
+    "parent": "new_product21",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan21",
+    "collapsed": false
+  },
+  {
+    "name": "Beta21",
+    "id": "beta21",
+    "dependency": "development21",
+    "parent": "new_product21",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter21",
+    "collapsed": false
+  },
+  {
+    "name": "Final development21",
+    "id": "finalize21",
+    "dependency": "beta21",
+    "parent": "new_product21",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch21",
+    "dependency": "finalize21",
+    "parent": "new_product21",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter21",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch22",
+    "id": "new_product22",
+    "owner": "Peter22",
+    "collapsed": false
+  },
+  {
+    "name": "Development22",
+    "id": "development22",
+    "parent": "new_product22",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan22",
+    "collapsed": false
+  },
+  {
+    "name": "Beta22",
+    "id": "beta22",
+    "dependency": "development22",
+    "parent": "new_product22",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter22",
+    "collapsed": false
+  },
+  {
+    "name": "Final development22",
+    "id": "finalize22",
+    "dependency": "beta22",
+    "parent": "new_product22",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch22",
+    "dependency": "finalize22",
+    "parent": "new_product22",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter22",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch23",
+    "id": "new_product23",
+    "owner": "Peter23",
+    "collapsed": false
+  },
+  {
+    "name": "Development23",
+    "id": "development23",
+    "parent": "new_product23",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan23",
+    "collapsed": false
+  },
+  {
+    "name": "Beta23",
+    "id": "beta23",
+    "dependency": "development23",
+    "parent": "new_product23",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter23",
+    "collapsed": false
+  },
+  {
+    "name": "Final development23",
+    "id": "finalize23",
+    "dependency": "beta23",
+    "parent": "new_product23",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch23",
+    "dependency": "finalize23",
+    "parent": "new_product23",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter23",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch24",
+    "id": "new_product24",
+    "owner": "Peter24",
+    "collapsed": false
+  },
+  {
+    "name": "Development24",
+    "id": "development24",
+    "parent": "new_product24",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan24",
+    "collapsed": false
+  },
+  {
+    "name": "Beta24",
+    "id": "beta24",
+    "dependency": "development24",
+    "parent": "new_product24",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter24",
+    "collapsed": false
+  },
+  {
+    "name": "Final development24",
+    "id": "finalize24",
+    "dependency": "beta24",
+    "parent": "new_product24",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch24",
+    "dependency": "finalize24",
+    "parent": "new_product24",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter24",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch25",
+    "id": "new_product25",
+    "owner": "Peter25",
+    "collapsed": false
+  },
+  {
+    "name": "Development25",
+    "id": "development25",
+    "parent": "new_product25",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan25",
+    "collapsed": false
+  },
+  {
+    "name": "Beta25",
+    "id": "beta25",
+    "dependency": "development25",
+    "parent": "new_product25",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter25",
+    "collapsed": false
+  },
+  {
+    "name": "Final development25",
+    "id": "finalize25",
+    "dependency": "beta25",
+    "parent": "new_product25",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch25",
+    "dependency": "finalize25",
+    "parent": "new_product25",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter25",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch26",
+    "id": "new_product26",
+    "owner": "Peter26",
+    "collapsed": false
+  },
+  {
+    "name": "Development26",
+    "id": "development26",
+    "parent": "new_product26",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan26",
+    "collapsed": false
+  },
+  {
+    "name": "Beta26",
+    "id": "beta26",
+    "dependency": "development26",
+    "parent": "new_product26",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter26",
+    "collapsed": false
+  },
+  {
+    "name": "Final development26",
+    "id": "finalize26",
+    "dependency": "beta26",
+    "parent": "new_product26",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch26",
+    "dependency": "finalize26",
+    "parent": "new_product26",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter26",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch27",
+    "id": "new_product27",
+    "owner": "Peter27",
+    "collapsed": false
+  },
+  {
+    "name": "Development27",
+    "id": "development27",
+    "parent": "new_product27",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan27",
+    "collapsed": false
+  },
+  {
+    "name": "Beta27",
+    "id": "beta27",
+    "dependency": "development27",
+    "parent": "new_product27",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter27",
+    "collapsed": false
+  },
+  {
+    "name": "Final development27",
+    "id": "finalize27",
+    "dependency": "beta27",
+    "parent": "new_product27",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch27",
+    "dependency": "finalize27",
+    "parent": "new_product27",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter27",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch28",
+    "id": "new_product28",
+    "owner": "Peter28",
+    "collapsed": false
+  },
+  {
+    "name": "Development28",
+    "id": "development28",
+    "parent": "new_product28",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan28",
+    "collapsed": false
+  },
+  {
+    "name": "Beta28",
+    "id": "beta28",
+    "dependency": "development28",
+    "parent": "new_product28",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter28",
+    "collapsed": false
+  },
+  {
+    "name": "Final development28",
+    "id": "finalize28",
+    "dependency": "beta28",
+    "parent": "new_product28",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch28",
+    "dependency": "finalize28",
+    "parent": "new_product28",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter28",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch29",
+    "id": "new_product29",
+    "owner": "Peter29",
+    "collapsed": false
+  },
+  {
+    "name": "Development29",
+    "id": "development29",
+    "parent": "new_product29",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan29",
+    "collapsed": false
+  },
+  {
+    "name": "Beta29",
+    "id": "beta29",
+    "dependency": "development29",
+    "parent": "new_product29",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter29",
+    "collapsed": false
+  },
+  {
+    "name": "Final development29",
+    "id": "finalize29",
+    "dependency": "beta29",
+    "parent": "new_product29",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch29",
+    "dependency": "finalize29",
+    "parent": "new_product29",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter29",
+    "collapsed": false
+  },
+  {
+    "name": "New product launch30",
+    "id": "new_product30",
+    "owner": "Peter30",
+    "collapsed": false
+  },
+  {
+    "name": "Development30",
+    "id": "development30",
+    "parent": "new_product30",
+    "start": "",
+    "end": "",
+    "completed": {
+      "amount": 0.6,
+      "fill": "#e80"
+    },
+    "owner": "Susan30",
+    "collapsed": false
+  },
+  {
+    "name": "Beta30",
+    "id": "beta30",
+    "dependency": "development30",
+    "parent": "new_product30",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter30",
+    "collapsed": false
+  },
+  {
+    "name": "Final development30",
+    "id": "finalize30",
+    "dependency": "beta30",
+    "parent": "new_product30",
+    "start": "",
+    "end": "",
+    "collapsed": false
+  },
+  {
+    "name": "Launch30",
+    "dependency": "finalize30",
+    "parent": "new_product30",
+    "start": "",
+    "end": "",
+    "milestone": true,
+    "owner": "Peter30",
+    "collapsed": false
   }
 ]
