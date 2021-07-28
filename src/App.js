@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Highcharts from "highcharts/highcharts-gantt";
 import HighchartsReact from "highcharts-react-official";
-import taskData from "./data.json";
+// import taskData from "./data.json";
+import taskData from "./shortdata.json";
 
 import HC_more from "highcharts/highcharts-more"; //module
 import draggable from "highcharts/modules/draggable-points";
 import map from "highcharts/modules/map";
+
+import AddTask from "./components/addTask";
+
 HC_more(Highcharts); //init module
 draggable(Highcharts);
 map(Highcharts);
@@ -38,6 +42,7 @@ var state = {
           text: "1m",
           events: {
             click: function () {
+              // alert("Clicked button");
               console.log("Button Clicked");
             },
           },
@@ -237,10 +242,12 @@ var state = {
             }
             let chartt = chartComponent.current.chart;
             var points = chartt.series;
+            console.log("After Expand: ", points);
+
             //change image of clicked Node
             points.map(function (rec) {
               rec.points.map(function (point) {
-                if (clickedPoint == point.id) {
+                if (clickedPoint == point.id && point.myImage) {
                   point.myImage.attr({
                     href: minusImage,
                   });
@@ -277,10 +284,10 @@ var state = {
             // hiding images of childs
             let chartt = chartComponent.current.chart;
             var points = chartt.series;
-
+            console.log("After collapse: ", points);
             points.map(function (rec) {
               rec.points.map(function (point) {
-                if (clickedPoint == point.id) {
+                if (clickedPoint == point.id && point.myImage) {
                   point.myImage.attr({
                     href: plusImage,
                   });
@@ -298,13 +305,8 @@ var state = {
     },
     series: [
       {
-        //   events:{
-        //   click : function(event){
-        //     console.log(',,,,,,,,,,,,,,,,,,,,,,',event.point)
-        //   }
-        // },
         name: "Offices",
-        data: taskData,
+        data: [],
       },
     ],
     mapNavigation: {
@@ -330,10 +332,7 @@ const addImagesOnTasks = () => {
     });
     points.map(function (rec) {
       rec.points.map(function (point) {
-        if (
-          !point.milestone &&
-          [...new Set(parents[0].concat(parents[1]))].includes(point.id)
-        ) {
+        if (!point.milestone && [...new Set(parents[0])].includes(point.id)) {
           point.myImage = chartt.renderer
             .image(
               minusImage,
@@ -444,7 +443,65 @@ const zoomCallback = () => {
   }, 200);
 };
 
+const addImagesOnNewTask = (id) => {
+  setTimeout(() => {
+    let chartt = chartComponent.current.chart;
+    var points = chartt.series,
+      width = 20,
+      height = 20;
+    parents[0].push(id);
+    points.map(function (rec) {
+      const removeDuplicates = (myArr, prop) => {
+        return myArr.filter((obj, pos, arr) => {
+          return arr.map((mapObj) => mapObj[prop]).indexOf(obj[prop]) === pos;
+        });
+      };
+      rec.points = removeDuplicates(rec.points, "id");
+      for (var i = 0; i < rec.points.length; i++) {
+        if (!rec.points[i].milestone && rec.points[i].id == id) {
+          rec.points[i].myImage = chartt.renderer
+            .image(
+              minusImage,
+              rec.points[i].plotX + chartt.plotLeft - 20,
+              rec.points[i].plotY + chartt.plotTop - height / 2,
+              width,
+              height
+              // function (event) {
+              //   console.log(event);
+              // }
+            )
+            .css({
+              position: "relative",
+            })
+            .attr({
+              id: rec.points[i].index,
+              zIndex: 10,
+            })
+            .add()
+            .on("click", function (event) {
+              if (chartt.yAxis[0].ticks[event.target.id]) {
+                chartt.yAxis[0].ticks[event.target.id].toggleCollapse();
+              }
+              if (rec.points[i].collapsed) {
+                rec.points[i].myImage.attr({
+                  href: plusImage,
+                });
+              } else {
+                rec.points[i].myImage.attr({
+                  href: minusImage,
+                });
+              }
+            });
+          break;
+        }
+      }
+    });
+  }, 100);
+};
+
 function App() {
+  const [showHideAddTask, setNewTask] = useState(false);
+
   const chartInitilization = () => {
     taskData.map((x, i) => {
       x.start = today + (i - 5) * day;
@@ -452,11 +509,79 @@ function App() {
       return x;
     });
   };
-
   chartInitilization();
+  const [ganttData, setData] = useState(taskData);
+  state.options.series[0].data = ganttData;
 
+  const showAddTask = () => {
+    setNewTask(!showHideAddTask);
+  };
+
+  const handleShowHide = (flag) => {
+    setNewTask(flag);
+  };
+
+  const handleNewTask = (task) => {
+    if (task.taskType === "Project") {
+      let parentId = task.projectName + new Date().getTime();
+      let newProject = {
+        name: task.projectName,
+        id: parentId,
+        collapsed: task.collapsed,
+        owner: task.owner,
+      };
+      let newTask = {
+        name: task.taskName,
+        id: task.taskName + new Date().getTime(),
+        start: task.start,
+        end: task.end,
+        parent: parentId,
+        collapsed: task.collapsed,
+        owner: task.owner,
+        milestone: task.milestone,
+      };
+      setData([...ganttData, newProject, newTask]);
+      addImagesOnNewTask(newProject.id);
+    } else {
+      let newTask = {
+        name: task.taskName,
+        id: task.taskName + new Date().getTime(),
+        parent: task.parent,
+        start: task.start,
+        end: task.end,
+        dependency: task.parent,
+        collapsed: task.collapsed,
+        owner: task.owner,
+        milestone: task.milestone,
+      };
+      setData([...ganttData, newTask]);
+    }
+    setNewTask(!showHideAddTask);
+  };
+  useEffect(() => {
+    chartComponent.current.chart.series[0].setData(ganttData);
+  }, [ganttData]);
   return (
     <div id="container">
+      <button onClick={showAddTask}>Add Task</button>
+      <button
+        onClick={() => {
+          console.log(chartComponent.current.chart);
+        }}
+      >
+        Show Chartt6
+      </button>
+      {showHideAddTask && (
+        <AddTask
+          parents={parents[0]}
+          setData={(value) => {
+            handleNewTask(value);
+          }}
+          showHidePopup={(value) => {
+            handleShowHide(value);
+          }}
+        />
+      )}
       <HighchartsReact
         constructorType={"chart"}
         constructorType={"ganttChart"}
