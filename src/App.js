@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Highcharts from "highcharts/highcharts-gantt";
 import HighchartsReact from "highcharts-react-official";
-// import taskData from "./data.json";
-import taskData from "./shortdata.json";
+import taskData from "./data.json";
+// import taskData from "./shortdata.json";
 
 import HC_more from "highcharts/highcharts-more"; //module
 import draggable from "highcharts/modules/draggable-points";
@@ -84,6 +84,7 @@ var state = {
         load: () => {
           addImagesOnTasks();
           addMouseWheelZoom();
+          hideLeftSide();
           Highcharts.wrap(Highcharts.Pointer.prototype, "dragStart", (p, e) => {
             zoomCallback();
           });
@@ -215,10 +216,9 @@ var state = {
       currentDateIndicator: true,
     },
     yAxis: {
-      labels: {
-        style: {
-          "z-index": 99999,
-        },
+      // visible: false,
+      style: {
+        visibility: "hidden",
       },
       events: {
         // expand: function (event) {
@@ -386,39 +386,93 @@ const imagePloatingAfterDrag = (data) => {
   }
 };
 
+const throttle = (callback, delay) => {
+  let isThrottled = false,
+    args,
+    context;
+
+  function wrapper() {
+    if (isThrottled) {
+      args = arguments;
+      context = this;
+      return;
+    }
+
+    isThrottled = true;
+    callback.apply(this, arguments);
+
+    setTimeout(() => {
+      isThrottled = false;
+      if (args) {
+        wrapper.apply(context, args);
+        args = context = null;
+      }
+    }, delay);
+  }
+  return wrapper;
+};
+
+const chartZoom = (e) => {
+  if (e.ctrlKey == true) {
+    e.preventDefault();
+    if (e.deltaY == -100)
+      chartComponent.current.chart.mapZoom(
+        0.7,
+        chartComponent.current.chart.xAxis[0].toValue(e.clientX),
+        chartComponent.current.chart.yAxis[0].toValue(e.clientY),
+        e.clientX,
+        e.clientY
+      );
+    else
+      chartComponent.current.chart.mapZoom(
+        1.3,
+        chartComponent.current.chart.xAxis[0].toValue(e.clientX),
+        chartComponent.current.chart.yAxis[0].toValue(e.clientY),
+        e.clientX,
+        e.clientY
+      );
+    zoomCallback();
+  }
+};
+
+const chartZoomBywheel = throttle(chartZoom, 1000);
+
 const addMouseWheelZoom = () => {
   document
     .getElementById("container")
     .addEventListener("mousewheel", (event) => {
+      chartZoomBywheel(event);
       if (event.ctrlKey == true) {
         event.preventDefault();
-        if (event.deltaY == -100)
-          chartComponent.current.chart.mapZoom(
-            0.7,
-            chartComponent.current.chart.xAxis[0].toValue(event.clientX),
-            chartComponent.current.chart.yAxis[0].toValue(event.clientY),
-            event.clientX,
-            event.clientY
-          );
-        else
-          chartComponent.current.chart.mapZoom(
-            1.3,
-            chartComponent.current.chart.xAxis[0].toValue(event.clientX),
-            chartComponent.current.chart.yAxis[0].toValue(event.clientY),
-            event.clientX,
-            event.clientY
-          );
-        zoomCallback();
       }
     });
 };
 
+const hideLeftSide = () => {
+  setTimeout(() => {
+    var list = document.getElementsByClassName(
+      "highcharts-axis-labels"
+    );
+    console.log(list)
+    list[2].style.visibility = 'hidden';
+    
+  }, 500);
+};
+
 const zoomCallback = () => {
   setTimeout(() => {
+    const removeDuplicates = (myArr, prop) => {
+      return myArr.filter((obj, pos, arr) => {
+        return arr.map((mapObj) => mapObj[prop]).indexOf(obj[prop]) === pos;
+      });
+    };
+    chartComponent.current.chart.series[0].points = removeDuplicates(
+      chartComponent.current.chart.series[0].points,
+      "id"
+    );
     let chartt = chartComponent.current.chart;
     var points = chartt.series,
       height = 20;
-
     console.log("zoom called", points);
     points.map((rec) => {
       rec.points.map(async (point) => {
@@ -445,18 +499,21 @@ const zoomCallback = () => {
 
 const addImagesOnNewTask = (id) => {
   setTimeout(() => {
+    const removeDuplicates = (myArr, prop) => {
+      return myArr.filter((obj, pos, arr) => {
+        return arr.map((mapObj) => mapObj[prop]).indexOf(obj[prop]) === pos;
+      });
+    };
+    chartComponent.current.chart.series[0].points = removeDuplicates(
+      chartComponent.current.chart.series[0].points,
+      "id"
+    );
     let chartt = chartComponent.current.chart;
     var points = chartt.series,
       width = 20,
       height = 20;
     parents[0].push(id);
     points.map(function (rec) {
-      const removeDuplicates = (myArr, prop) => {
-        return myArr.filter((obj, pos, arr) => {
-          return arr.map((mapObj) => mapObj[prop]).indexOf(obj[prop]) === pos;
-        });
-      };
-      rec.points = removeDuplicates(rec.points, "id");
       for (var i = 0; i < rec.points.length; i++) {
         if (!rec.points[i].milestone && rec.points[i].id == id) {
           rec.points[i].myImage = chartt.renderer
@@ -528,11 +585,11 @@ function App() {
         name: task.projectName,
         id: parentId,
         collapsed: task.collapsed,
-        owner: task.owner,
       };
       let newTask = {
         name: task.taskName,
         id: task.taskName + new Date().getTime(),
+        dependency: parentId,
         start: task.start,
         end: task.end,
         parent: parentId,
@@ -561,6 +618,7 @@ function App() {
   useEffect(() => {
     chartComponent.current.chart.series[0].setData(ganttData);
   }, [ganttData]);
+
   return (
     <div id="container">
       <button onClick={showAddTask}>Add Task</button>

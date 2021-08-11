@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./addTask.css";
-// import taskData from "../data.json";
-import taskData from "../shortdata.json";
+import taskData from "../data.json";
+// import taskData from "../shortdata.json";
 
-var today = new Date(),
-  day = 1000 * 60 * 60 * 24;
+var today = new Date();
+  // day = 1000 * 60 * 60 * 24;
 
 // Set to 00:00:00:000 today
 today.setUTCHours(0);
