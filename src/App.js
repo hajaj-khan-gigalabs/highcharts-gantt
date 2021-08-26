@@ -84,7 +84,8 @@ var state = {
         load: () => {
           addImagesOnTasks();
           addMouseWheelZoom();
-          hideLeftSide();
+          // hideLeftSide();
+          // CreateSVGLeftSide();
           Highcharts.wrap(Highcharts.Pointer.prototype, "dragStart", (p, e) => {
             zoomCallback();
           });
@@ -450,12 +451,21 @@ const addMouseWheelZoom = () => {
 
 const hideLeftSide = () => {
   setTimeout(() => {
-    var list = document.getElementsByClassName(
-      "highcharts-axis-labels"
-    );
-    console.log(list)
-    list[2].style.visibility = 'hidden';
-    
+    var list = document.getElementsByClassName("highcharts-axis-labels");
+    list[2].style.visibility = "hidden";
+  }, 500);
+};
+
+const CreateSVGLeftSide = () => {
+  setTimeout(() => {
+    let r = chartComponent.current.chart.renderer;
+    r.path(["M", 500, 500, "L", 500, 850])
+      .attr({
+        "stroke-width": 5,
+        stroke: "silver",
+        dashstyle: "dash",
+      })
+      .add();
   }, 500);
 };
 
